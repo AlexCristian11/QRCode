@@ -12,7 +12,7 @@ def generate_qrcode(text):
     qr.add_data(text)
     qr.make(fit=True)
     img = qr.make_image(fill_color="green", back_color="black")
-    img.save(f"qrcode.png")
+    img.save("qrcode.png")
 
-
-generate_qrcode("https://github.com/AlexCristian11")
+url = input("Enter a URL: ")
+generate_qrcode(url)
